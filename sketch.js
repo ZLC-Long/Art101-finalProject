@@ -6,6 +6,7 @@ let monsters = [];
 
 //spriteSheets and animations
 let dog;
+let dogStartImage;
 let dogJSON;
 let dogSpritesheet;
 let dogAnimation = [];
@@ -32,6 +33,8 @@ function preload() {
 
   //background
   bgImg = loadImage('assests/forest.jpeg');
+  //startdogImage
+  dogStartImage = loadImage('assests/dogStart.png');
   // bgImg1 = loadImage('assests/bg.png');--test
 
   //bgSound
@@ -60,7 +63,7 @@ function setup() {
   //bg music & loop & slider
   bgsound.loop();
   slider = createSlider(0, 1, 0.5, 0.01);
-  slider.position(w - 100, h / 10);
+  slider.position(w + 100, h / 10);
   // slider.style('width', '100px');
 
 }
@@ -113,6 +116,8 @@ function title() {
   textSize(20);
   text('click anywhere to start', w / 2, w / 2);
   noStroke();
+
+  image(dogStartImage, w/10, h-150, dogStartImage.width/4, dogStartImage.height/4);
 
 
 }
