@@ -111,7 +111,7 @@ function title() {
   stroke(255);
   textAlign(CENTER);
   fill(255);
-  text('Jump! Dog!', w / 2, h / 4);
+  text('Run! Dog!', w / 2, h / 4);
 
   textSize(20);
   text('click anywhere to start', w / 2, w / 2);
